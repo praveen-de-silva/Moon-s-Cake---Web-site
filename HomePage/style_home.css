@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", 'poppins', sans-serif;
+    box-sizing: border-box;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url("imgs/BG_Main.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+/* Style the navigation bar */
+header {
+    background-color: #333;  /* Dark background */
+    padding: 15px 0;         /* Space around navbar */
+}
+
+.navbar {
+    display: flex;           /* Arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    list-style: none;        /* Remove bullet points */
+}
+
+.navbar li {
+    margin: 0 15px;          /* Space between buttons */
+}
+
+.navbar a {
+    text-decoration: none;   /* Remove underline */
+    color: white;            /* White text */
+    font-size: 18px;
+    padding: 10px 15px;      /* Add padding */
+    border-radius: 5px;      /* Rounded corners */
+    transition: 0.3s;        /* Smooth hover effect */
+}
+
+.navbar a:hover {
+    background-color: #555;  /* Change color on hover */
+}
+.container {
+    display: flex;
+    justify-content: center;  /* Centers the logo horizontally */
+}
+
+.logo {
+    width: 450px;
+    height: auto;
+    
+}
+/* Animated Text Styling */
+h1 {
+    margin-top: 20px;
+    font-size: 49px;
+    color: #333;
+    text-align: center;
+    font-family: "Macondo", serif;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
