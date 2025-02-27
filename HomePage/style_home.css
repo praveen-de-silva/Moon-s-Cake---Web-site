@@ -19,6 +19,11 @@ body {
 header {
     background-color: #333;  /* Dark background */
     padding: 15px 0;         /* Space around navbar */
+    position: fixed;         /* Fixes the header at the top */
+    top: 0;                  /* Ensures it stays at the top */
+    left: 0;                 /* Aligns it to the left edge */
+    width: 100%;             /* Ensures full width */
+    z-index: 1000;           /* Keeps it above other elements */
 }
 
 .navbar {
@@ -49,6 +54,7 @@ header {
 }
 
 .logo {
+    margin-top: 5%;
     width: 450px;
     height: auto;
     
@@ -64,4 +70,80 @@ h1 {
     font-style: normal;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+}
+
+#home_para1 {
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Aligns text vertically (if needed) */
+    text-align: center; /* Ensures the text inside is centered */
+    padding: 20px 10%; /* Adds padding on left and right */
+}
+
+#home_para1 p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f2600;
+    font-family: "Macondo", sans-serif;
+    max-width: auto; /* Limits paragraph width for better readability */
+}
+
+
+
+/*----- Home Services -----*/
+
+#home_services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between boxes */
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+}
+
+.box_home_services {
+    position: relative; /* Allows absolute positioning for text */
+    border-radius: 12px; /* Rounded corners */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: auto; /* Ensures the width adjusts dynamically */
+    height: 350px;
+    margin: auto; /* Centers items inside the grid */
+}
+
+.box_home_services:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image styling */
+.img_home_services {
+    width: 100%;
+    height: 100%; /* Makes the image fill the box */
+    object-fit: cover; /* Ensures the image covers the entire box without stretching */
+}
+
+/* Dark gradient overlay at the bottom */
+.box_home_services::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Covers bottom portion */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0)); /* Dark fade effect */
+}
+
+/* Text inside the image */
+.box_home_services p {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff; /* White text */
+    font-family: "Macondo", sans-serif;
+    z-index: 1; /* Ensures text appears above overlay */
 }
