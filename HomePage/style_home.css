@@ -5,6 +5,11 @@
     box-sizing: border-box;
     
 }
+p {
+    font-family: "Trebuchet MS", serif;
+    font-size: 18px;
+    padding: 10px 15px;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -150,7 +155,7 @@ h1 {
 .center-icon {
     position: relative; /* Keeps it in normal document flow */
     text-align: center; /* Centers the child element (the <a> tag) */
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 20px;
 }
 
