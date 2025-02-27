@@ -6,9 +6,11 @@
     
 }
 p {
-    font-family: "Trebuchet MS", serif;
-    font-size: 18px;
+    font-family: "Macondo","Trebuchet MS", serif;
+    font-size: 20px;
     padding: 10px 15px;
+    
+    font-weight: bold;
 }
 html {
     scroll-behavior: smooth;
