@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Trebuchet MS", 'poppins', sans-serif;
+            box-sizing: border-box;
+            
+        }
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -13,32 +23,36 @@
             scroll-behavior: smooth; /* Smooth scrolling */
         }
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #333;
-            padding: 20px 0;
-            text-align: center;
-            z-index: 10;
+            background-color: #333;  /* Dark background */
+            padding: 15px 0;         /* Space around navbar */
+            position: fixed;         /* Fixes the header at the top */
+            top: 0;                  /* Ensures it stays at the top */
+            left: 0;                 /* Aligns it to the left edge */
+            width: 100%;             /* Ensures full width */
+            z-index: 1000;           /* Keeps it above other elements */
         }
-        .menu {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
+
+        .navbar {
+            display: flex;           /* Arrange items in a row */
+            justify-content: center; /* Center items horizontally */
+            list-style: none;        /* Remove bullet points */
         }
-        .menu a {
-            color: White;
-            text-decoration: none;
-            font-size: 20px;
-            cursor: pointer;
-            transition: color 0.3s;
+
+        .navbar li {
+            margin: 0 15px;          /* Space between buttons */
         }
-        .menu a:hover {
-            color: white;
+
+        .navbar a {
+            text-decoration: none;   /* Remove underline */
+            color: white;            /* White text */
+            font-size: 18px;
+            padding: 10px 15px;      /* Add padding */
+            border-radius: 5px;      /* Rounded corners */
+            transition: 0.3s;        /* Smooth hover effect */
+        }
+
+        .navbar a:hover {
+            background-color: #555;  /* Change color on hover */
         }
         
         /* Animation for fade-in and scaling */
@@ -145,13 +159,16 @@
 </head>
 <body>
     <header>
-        <nav class="menu">
-            <a href="#home">Home</a>
-            <a href="#contacts">Service</a>
-            <a href="#contacts">Updates</a>
-            <a href="#contacts">About</a>
-            <a href="#contacts">Contact Us</a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="updates.html">Updates</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+        
     </header>
 
     <!-- Home Section -->
