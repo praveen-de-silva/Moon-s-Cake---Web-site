@@ -6,36 +6,237 @@
     <title>Thank You</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
             margin: 0;
-            overflow: hidden;
-            background: url('background.jpg') no-repeat center center/cover;
             font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+            scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+            scroll-behavior: smooth; /* Smooth scrolling */
         }
-        h1 {
-            color: #130e08;
-            background: #fdf3e4;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        img {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            position: absolute;
+        header {
+            position: fixed;
             top: 0;
             left: 0;
+            width: 100%;
+            background: #333;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 10;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu a {
+            color: White;
+            text-decoration: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: white;
+        }
+        
+        /* Animation for fade-in and scaling */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Message styling */
+        .message {
+            font-size: 120px;
+            color: black;
+            font-weight: bold;
+            display: inline-block;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        /* Section styling */
+        section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: white; /* Text color for better visibility */
+            scroll-snap-align: start; /* Snap sections to the top */
+            position: relative; /* Needed for absolute positioning of the image */
+        }
+
+        /* Ensure the background image covers the entire page */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('Images/BG_Main.png') no-repeat center center/cover;
             z-index: -1;
+        }
+
+        /* Style for the image container */
+        .image-container {
+            position: absolute;
+            right: 20px; /* Adjust the distance from the right edge */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust for exact vertical centering */
+            width: 50%; /* Map takes 50% of the page width */
+            height: 50vh; /* Map takes 50% of the page height */
+            border: 10px solid #ccc; /* Frame around the map */
+            border-radius: 10px; /* Rounded corners for the frame */
+            padding: 10px; /* Space between the map and the frame */
+            background-color: #fff; /* Background color for the frame */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+            overflow: hidden; /* Ensure the map fits within the container */
+        }
+
+        /* Style for the map iframe */
+        .image-container iframe {
+            display: block;
+            width: 100%; /* Ensure the iframe fits within the container */
+            height: 100%; /* Ensure the iframe fits within the container */
+            border-radius: 5px; /* Slightly rounded corners for the iframe */
+        }
+
+        /* Style for the details container */
+        .details-container {
+            position: absolute;
+            left: 20px; /* Adjust the distance from the left edge */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust for exact vertical centering */
+            width: 40%; /* Details take 40% of the page */
+            color: black; /* Text color for better visibility */
+            font-size: 30px; /* CHANGED: Increased font size for better readability */
+        }
+
+        /* Style for the bottom bar */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            z-index: 10;
+            display: none; /* Hidden by default */
+        }
+
+        /* Show bottom bar when the user scrolls to the bottom */
+        .bottom-bar.visible {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <h1>Thank you for visiting us</h1>
-    <img src="BG_Main.png" alt="Background Image">
+    <header>
+        <nav class="menu">
+            <a href="#home">Home</a>
+            <a href="#contacts">Service</a>
+            <a href="#contacts">Updates</a>
+            <a href="#contacts">About</a>
+            <a href="#contacts">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1 id="thankYouMessage" class="message"></h1>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contacts">
+        <div class="details-container">
+            <h2>Contact Details</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: University of Moratuwa, Sri Lanka</p>
+        </div>
+        <div class="image-container">
+            <!-- Interactive Google Map -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.925598835673!2d79.9007223153265!3d6.795407721393918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2455b5e5f2b3b%3A0x4b7f4b8f5b8f5b8f!2sUniversity%20of%20Moratuwa!5e0!3m2!1sen!2slk!4v1622541234567!5m2!1sen!2slk"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <p>© 2023 Your Company. All rights reserved.</p>
+    </div>
+
+    <script>
+        function animateText(element, text, delay = 10) {
+            element.innerHTML = ""; // Clear the text
+            let index = 0;
+            function showLetter() {
+                if (index < text.length) {
+                    element.innerHTML += text[index];
+                    index++;
+                    setTimeout(showLetter, delay);
+                } else {
+                    // Once text is fully displayed, apply fade-in and scale animation
+                    element.style.opacity = "1";
+                    element.style.animation = "fadeInScale 1s ease-in-out forwards";
+                }
+            }
+            showLetter();
+        }
+
+        // Ensure the page starts at the top on load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add a small delay to ensure the page is fully rendered
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+            }, 100); // 100ms delay
+        });
+
+        // Start animation on window load
+        window.onload = function() {
+            let messageElement = document.getElementById('thankYouMessage');
+            let messageText = "Thank you for visiting us!";
+            animateText(messageElement, messageText, 10);
+        };
+
+        // Show/hide bottom bar based on scroll position
+        const bottomBar = document.querySelector('.bottom-bar');
+
+        function checkScroll() {
+            // Check if the user has scrolled to the bottom of the page
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const pageHeight = document.documentElement.scrollHeight;
+
+            // Show bottom bar if the user is at the bottom
+            if (scrollPosition >= pageHeight - 10) { // 10px tolerance
+                bottomBar.classList.add('visible');
+            } else {
+                bottomBar.classList.remove('visible');
+            }
+        }
+
+        // Listen for scroll events
+        window.addEventListener('scroll', checkScroll);
+
+        // Trigger scroll event on page load to check initial visibility
+        window.dispatchEvent(new Event('scroll'));
+    </script>
 </body>
 </html>
