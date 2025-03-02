@@ -138,22 +138,19 @@
         }
 
         /* Style for the bottom bar */
-        .bottom-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #333;
-            padding: 20px 0;
-            text-align: center;
+        footer {
+            background-color: #333;
             color: white;
-            z-index: 10;
-            display: none; /* Hidden by default */
+            text-align: center;
+            padding: 20px 0;
+            position:relative;
+            width: 100%;
+            bottom: 0;
         }
-
-        /* Show bottom bar when the user scrolls to the bottom */
-        .bottom-bar.visible {
-            display: block;
+        footer p {
+            font-family: "Trebuchet MS";
+            font-size: 16px;
+            font-weight:lighter;
         }
     </style>
 </head>
@@ -161,11 +158,11 @@
     <header>
         <nav>
             <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="../HomePage/home.html">Home</a></li>
+                <li><a href="../ServicesPage/services.html">Services</a></li>
                 <li><a href="updates.html">Updates</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../Contacts/Contact.html">Contact</a></li>
             </ul>
         </nav>
         
@@ -196,9 +193,9 @@
     </section>
 
     <!-- Bottom Bar -->
-    <div class="bottom-bar">
-        <p>© 2023 Your Company. All rights reserved.</p>
-    </div>
+    <footer>
+        <p>&copy; 2023 Moon's Cake. All rights reserved.</p>
+    </footer>
 
     <script>
         function animateText(element, text, delay = 10) {
