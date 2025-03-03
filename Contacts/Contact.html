@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Playwrite+AU+VIC+Guides&family=Poiret+One&display=swap" rel="stylesheet">
+        
+
     <style>
         * {
             margin: 0;
             padding: 0;
-            font-family: "Trebuchet MS", 'poppins', sans-serif;
+            font-family: "Macondo", 'poppins', sans-serif;
             box-sizing: border-box;
             
         }
@@ -69,10 +75,12 @@
 
         /* Message styling */
         .message {
-            font-size: 120px;
+            padding-top: 80px;
+            text-align: center;
+            font-size: 40px;
             color: black;
             font-weight: bold;
-            display: inline-block;
+            /* display: inline-block; */
             opacity: 0;
             transform: scale(0.5);
         }
@@ -169,9 +177,9 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home">
+    <div id="home">
         <h1 id="thankYouMessage" class="message"></h1>
-    </section>
+    </div>
 
     <!-- Contact Us Section -->
     <section id="contacts">
