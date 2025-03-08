@@ -1,16 +1,48 @@
-function addUpdate() {
-    let inputField = document.getElementById("update-text");
-    let updateText = inputField.value.trim();
+document.addEventListener("DOMContentLoaded", loadUpdates);
 
-    if (updateText === "") {
-        alert("Please enter an update.");
+function addUpdate() {
+    let dateInput = document.getElementById("update-date").value;
+    let topicInput = document.getElementById("update-topic").value.trim();
+    let descriptionInput = document.getElementById("update-description").value.trim();
+
+    if (dateInput === "" || topicInput === "" || descriptionInput === "") {
+        alert("Please fill all fields before adding an update.");
         return;
     }
 
-    let listItem = document.createElement("li");
-    let date = new Date().toLocaleDateString();
-    listItem.innerHTML = `<strong>${date}:</strong> ${updateText}`;
+    let update = { date: dateInput, topic: topicInput, description: descriptionInput };
+    let updates = JSON.parse(localStorage.getItem("updates")) || [];
+    updates.unshift(update); // Add new update at the beginning
+    localStorage.setItem("updates", JSON.stringify(updates));
 
-    document.getElementById("updates-list").prepend(listItem);
-    inputField.value = ""; // Clear input field
+    renderUpdates();
+    document.getElementById("update-date").value = "";
+    document.getElementById("update-topic").value = "";
+    document.getElementById("update-description").value = "";
+}
+
+function loadUpdates() {
+    renderUpdates();
+}
+
+function renderUpdates() {
+    let updatesList = document.getElementById("updates-list");
+    updatesList.innerHTML = ""; // Clear list
+
+    let updates = JSON.parse(localStorage.getItem("updates")) || [];
+
+    updates.forEach((update, index) => {
+        let listItem = document.createElement("li");
+        listItem.classList.add("update-item");
+        listItem.innerHTML = `<strong>${update.topic} [${update.date}]</strong><br>${update.description} 
+                              <button class="delete-btn" onclick="deleteUpdate(${index})">×</button>`;
+        updatesList.appendChild(listItem);
+    });
+}
+
+function deleteUpdate(index) {
+    let updates = JSON.parse(localStorage.getItem("updates")) || [];
+    updates.splice(index, 1);
+    localStorage.setItem("updates", JSON.stringify(updates));
+    renderUpdates();
 }
