@@ -1,0 +1,246 @@
+/* Root Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Macondo", "Poppins", sans-serif;
+  color: #333;
+  font-size: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Background Image */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Images/BG_Main.png') no-repeat center center/cover;
+  z-index: -1;
+}
+
+/* Header Navigation */
+header {
+  background-color: #333;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: "Trebuchet MS", "Macondo", "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animated Message */
+.message {
+  font-family: "Macondo", "Poppins", sans-serif;
+  padding-top: 80px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* Sections */
+section {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  position: relative;
+  flex-direction: column; /* Allow vertical stacking */
+}
+
+
+#contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: transparent;
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  gap: 40px;
+}
+
+.details-container {
+  position: static;
+  width: 100%;
+  font-size: 20px;
+  color: #333;
+  background: rgba(251, 231, 221, 0.782);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  line-height: 1.6;
+  text-align: left;
+}
+.details-container p {
+    /* font-size: small; */
+}
+
+.image-container {
+  width: 100%;
+  height: 400px;
+  border: 10px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.image-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  display: block;
+}
+
+
+.details-container h2 {
+  margin-bottom: 15px;
+  color: #5c2e00;
+  font-size: 26px;
+  font-family: "Macondo","Trebuchet MS", "Macondo", 'Poppins', sans-serif;
+}
+
+.details-container a {
+  text-decoration: none;
+  color: #b87333;
+}
+
+.details-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* Contact Form */
+.contact-form-section {
+  background: linear-gradient(to right, rgba(255, 151, 151, 0.1), rgba(255, 151, 151, 0.23));
+
+  padding: 100px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0px auto;
+  margin-bottom: 100px;
+  /* text-align: center; */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #b87333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #944f1c;
+}
+
+.contact-title {
+  /* text-align: center; */
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #5c2e00;
+  font-family: "Trebuchet MS", "Macondo",'Poppins', sans-serif;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+}
+
+footer p {
+  font-size: 16px;
+  font-weight: lighter;
+  color: #ccc;
+}

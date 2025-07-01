@@ -11,7 +11,7 @@ p {
     font-size: 20px;
     padding: 10px 15px;
     
-    font-weight: bold;
+    font-weight: lighter;
 }
 html {
     scroll-behavior: smooth;
@@ -77,12 +77,12 @@ h2 {
     font-size: 28px;
     color: #3f2600;
     font-family: "Macondo", sans-serif;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 /* Service Box */
 .service-box {
-    display: flex;
+    font-family:    sans-serif;
     align-items: center;
     justify-content: space-between;
     background: rgba(255, 255, 255, 0.8);
@@ -90,7 +90,13 @@ h2 {
     margin: 20px 0;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    
     /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+}
+
+.service-box-inner {
+    display: flex;
+    width: 100%;
 }
 
 /* .service-box:hover {
@@ -99,26 +105,68 @@ h2 {
 } */
 
 .service-box img {
-    width: 40%;
+    width: 300px;
+    height: 200px;
+    padding-bottom: 20px;
     height: auto;
     border-radius: 10px;
+}
+
+#service-box1 {
+  background: linear-gradient(to right, rgba(255,255,255,0.8), rgb(255, 233, 233)),
+              url("imgs/Cake_home_1.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#service-box2 {
+  background: linear-gradient(to right, rgba(255,255,255,0.8), rgb(255, 233, 233)),
+              url("imgs/Cake_home_2_weddingCake.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+#service-box3 {
+  background: linear-gradient(to right, rgba(255,255,255,0.8), rgb(255, 233, 233)),
+              url("imgs/sweets_home_1.jpeg") no-repeat center center;
+  background-size: cover;
 }
 
 .service-text {
     width: 55%;
     text-align: left;
+    flex: 1;
 }
 
 .service-text p {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: lighter;
     color: #3f2600;
-    font-family: "Macondo", sans-serif;
+    font-family: "Trebuchet MS",  sans-serif;
+    text-align: left
+    ;
+    
+}
+
+.service-text #price {
+    font-weight: bold;
+    padding-top: 30px;
+    font-family: "Trebuchet MS",  sans-serif;
+    
+    /* font-size: 25px; */
+}
+
+.service-title {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #5c2e00;
+    margin-bottom: 15px;
 }
 
 footer {
     background-color: #333;
-    color: white;
+    color: #ccc;
     text-align: center;
     padding: 10px 0;
     position: relative;

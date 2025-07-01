@@ -1,77 +1,95 @@
 <!DOCTYPE html>
-<html lang = en>
-    <head>
-        <meta charset="utf-8">
-        <title> Moon's Cake </title>
-        <link rel="stylesheet" href="style_home.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Moon's Cake</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style_home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://kit.fontawesome.com/e8e57a01dd.js" crossorigin="anonymous"></script>
+</head>
 
-        <!-- for fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Playwrite+AU+VIC+Guides&family=Poiret+One&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/e8e57a01dd.js" crossorigin="anonymous"></script> <!-- for icon -->
+<body>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="../HomePage/home.html">Home</a></li>
+        <li><a href="../ServicesPage/services.html">Services</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="../Contacts/Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    </head>
+  <main>
+    <div class="container">
+        <img src="imgs/logo.png" alt="Moon's Cake Logo" class="logo" />
 
-    <body>
-        <header>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="../HomePage/home.html">Home</a></li>
-                    <li><a href="../ServicesPage/services.html">Services</a></li>
-                    <li><a href="updates.html">Updates</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="../Contacts/Contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        
+    </div>
+
+
+
+    <h1 id="changing-text">Welcome!</h1>
+
+    <div class="hero-section">
+            <div class="business-stats">
+
+                <div class="stat-box">
+                <h3>👥 Total Customers : 1,250+</h3>
             
-        </header>
 
-        <div class="container">
-            <img src="imgs/logo.png" alt="logo" class="logo">
-        </div>
+                <h3>📦 Total Orders : 3,680+</h3>
+            
+                
+                <h3>🕒 Open : 24/7 Service</h3>
+            
+                </div>
 
-        
-        <!-- Animated Text -->
-        <h1 id="changing-text">Welcome !</h1>
-
-        
-        
-
-        <!-- boxes with imgs and text -->
-        <div id="home_services">
-            <div class="box_home_services">
-                <img src="imgs/Cake_home_1.jpg" class="img_home_services" alt="Icing Cakes">
-                <p>Icing Cakes</p>
-            </div>
-            <div class="box_home_services">
-                <img src="imgs/Cake_home_2_weddingCake.jpg" class="img_home_services" alt="Wedding Cakes">
-                <p>Wedding Cakes</p>
-            </div>
-            <div class="box_home_services">
-                <img src="imgs/sweets_home_1.jpeg" class="img_home_services" alt="Sweets">
-                <p>Sweets</p>
             </div>
         </div>
-        <div class="center-icon">
-            <a href="../ServicesPage/services.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            <p>See more</p>
-        </div>
-        
-        <div id="home_para1">
-            <p>At Moon’s Cake, we bring sweetness to every celebration with our handcrafted cakes, delightful sweets, and custom treats. From classic buttercream cakes to elegant wedding masterpieces, every bite is made with love and the finest ingredients. Let us make your sweetest dreams come true! </p>
-        </div>
 
+    <section id="home_services">
+      <article class="box_home_services">
+        <img src="imgs/Cake_home_1.jpg" class="img_home_services" alt="Icing Cakes" />
+        <p>Icing Cakes</p>
+      </article>
+      <article class="box_home_services">
+        <img src="imgs/Cake_home_2_weddingCake.jpg" class="img_home_services" alt="Wedding Cakes" />
+        <p>Wedding Cakes</p>
+      </article>
+      <article class="box_home_services">
+        <img src="imgs/sweets_home_1.jpeg" class="img_home_services" alt="Sweets" />
+        <p>Sweets</p>
+      </article>
+    </section>
 
+    <div class="center-icon">
+      <a href="../ServicesPage/services.html" aria-label="See more services">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+      <p>See more</p>
+    </div>
 
-        <!-- Link JavaScript -->
-        <script src="script_home.js"></script>
-        
-        
-        
-    </body>
-    <footer>
-        <p>&copy; 2023 Moon's Cake. All rights reserved.</p>
-    </footer>
+    <section id="home_para1">
+      <p>
+        At Moon’s Cake, we bring sweetness to every celebration with our handcrafted cakes,
+        delightful sweets, and custom treats. From classic buttercream cakes to elegant wedding masterpieces,
+        every bite is made with love and the finest ingredients. Let us make your sweetest dreams come true!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Moon's Cake. All rights reserved.</p>
+  </footer>
+
+  <script src="script_home.js"></script>
+</body>
 </html>

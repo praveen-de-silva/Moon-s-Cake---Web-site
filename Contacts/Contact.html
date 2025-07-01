@@ -8,158 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Playwrite+AU+VIC+Guides&family=Poiret+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style_contact.css" />
         
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: "Macondo", 'poppins', sans-serif;
-            box-sizing: border-box;
-            
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Prevent horizontal overflow */
-            scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
-            scroll-behavior: smooth; /* Smooth scrolling */
-        }
-        header {
-            background-color: #333;  /* Dark background */
-            padding: 15px 0;         /* Space around navbar */
-            position: fixed;         /* Fixes the header at the top */
-            top: 0;                  /* Ensures it stays at the top */
-            left: 0;                 /* Aligns it to the left edge */
-            width: 100%;             /* Ensures full width */
-            z-index: 1000;           /* Keeps it above other elements */
-        }
-
-        .navbar {
-            display: flex;           /* Arrange items in a row */
-            justify-content: center; /* Center items horizontally */
-            list-style: none;        /* Remove bullet points */
-        }
-
-        .navbar li {
-            margin: 0 15px;          /* Space between buttons */
-        }
-
-        .navbar a {
-            text-decoration: none;   /* Remove underline */
-            color: white;            /* White text */
-            font-size: 18px;
-            padding: 10px 15px;      /* Add padding */
-            border-radius: 5px;      /* Rounded corners */
-            transition: 0.3s;        /* Smooth hover effect */
-        }
-
-        .navbar a:hover {
-            background-color: #555;  /* Change color on hover */
-        }
-        
-        /* Animation for fade-in and scaling */
-        @keyframes fadeInScale {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Message styling */
-        .message {
-            padding-top: 80px;
-            text-align: center;
-            font-size: 40px;
-            color: black;
-            font-weight: bold;
-            /* display: inline-block; */
-            opacity: 0;
-            transform: scale(0.5);
-        }
-
-        /* Section styling */
-        section {
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 48px;
-            color: white; /* Text color for better visibility */
-            scroll-snap-align: start; /* Snap sections to the top */
-            position: relative; /* Needed for absolute positioning of the image */
-        }
-
-        /* Ensure the background image covers the entire page */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('Images/BG_Main.png') no-repeat center center/cover;
-            z-index: -1;
-        }
-
-        /* Style for the image container */
-        .image-container {
-            position: absolute;
-            right: 20px; /* Adjust the distance from the right edge */
-            top: 50%; /* Center vertically */
-            transform: translateY(-50%); /* Adjust for exact vertical centering */
-            width: 50%; /* Map takes 50% of the page width */
-            height: 50vh; /* Map takes 50% of the page height */
-            border: 10px solid #ccc; /* Frame around the map */
-            border-radius: 10px; /* Rounded corners for the frame */
-            padding: 10px; /* Space between the map and the frame */
-            background-color: #fff; /* Background color for the frame */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
-            overflow: hidden; /* Ensure the map fits within the container */
-        }
-
-        /* Style for the map iframe */
-        .image-container iframe {
-            display: block;
-            width: 100%; /* Ensure the iframe fits within the container */
-            height: 100%; /* Ensure the iframe fits within the container */
-            border-radius: 5px; /* Slightly rounded corners for the iframe */
-        }
-
-        /* Style for the details container */
-        .details-container {
-            position: absolute;
-            left: 20px; /* Adjust the distance from the left edge */
-            top: 50%; /* Center vertically */
-            transform: translateY(-50%); /* Adjust for exact vertical centering */
-            width: 40%; /* Details take 40% of the page */
-            color: black; /* Text color for better visibility */
-            font-size: 30px; /* CHANGED: Increased font size for better readability */
-        }
-
-        /* Style for the bottom bar */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position:relative;
-            width: 100%;
-            bottom: 0;
-        }
-        footer p {
-            font-family: "Trebuchet MS";
-            font-size: 16px;
-            font-weight:lighter;
-        }
     </style>
 </head>
 <body>
@@ -181,24 +32,57 @@
         <h1 id="thankYouMessage" class="message"></h1>
     </div>
 
-    <!-- Contact Us Section -->
     <section id="contacts">
-        <div class="details-container">
-            <h2>Contact Details</h2>
-            <p>Email: example@example.com</p>
-            <p>Phone: +123 456 7890</p>
-            <p>Address: University of Moratuwa, Sri Lanka</p>
-        </div>
-        <div class="image-container">
-            <!-- Interactive Google Map -->
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.925598835673!2d79.9007223153265!3d6.795407721393918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2455b5e5f2b3b%3A0x4b7f4b8f5b8f5b8f!2sUniversity%20of%20Moratuwa!5e0!3m2!1sen!2slk!4v1622541234567!5m2!1sen!2slk"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy">
-            </iframe>
+        <div class="contacts-wrapper">
+            <div class="details-container">
+                <h2>Get in Touch</h2>
+                <p><strong>Email:</strong> <a href="mailto:info@moonscake.lk">info@moonscake.lk</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+94112345678">+94 112 345 678</a></p>
+                <p><strong>Location:</strong> University of Moratuwa, Katubedda, Sri Lanka</p>
+                <br><p>Available 7 days a week • 8:00 AM – 8:00 PM</p></div>
+                
+                <!-- Contact form -->
+                <div class="details-container"> 
+                    <form action="store_contact.php" method="POST" class="contact-form">
+                        <h2 class="contact-title">Send Us a Message</h2>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact" required pattern="[0-9+ ]{7,15}" />
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+            
+
+                <div class="image-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.793063277897!2d79.89823642448204!3d6.795014919949655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae245416b7f34b5%3A0x7bd32721ab02560e!2sUniversity%20of%20Moratuwa!5e0!3m2!1sen!2sus!4v1751364685051!5m2!1sen!2sus" width="600" height="450" width="600" height="450" width="600" height="450"
+                        style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            
         </div>
     </section>
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
 
     <!-- Bottom Bar -->
     <footer>
@@ -235,7 +119,7 @@
         window.onload = function() {
             let messageElement = document.getElementById('thankYouMessage');
             let messageText = "Thank you for visiting us!";
-            animateText(messageElement, messageText, 10);
+            animateText(messageElement, messageText, 0);
         };
 
         // Show/hide bottom bar based on scroll position
