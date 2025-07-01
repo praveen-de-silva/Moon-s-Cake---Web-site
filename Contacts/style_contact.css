@@ -125,7 +125,8 @@ section {
   width: 100%;
   font-size: 20px;
   color: #333;
-  background: rgba(251, 231, 221, 0.782);
+  background-color: #fff7f1;
+  /* background: rgba(251, 231, 221, 0.782); */
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

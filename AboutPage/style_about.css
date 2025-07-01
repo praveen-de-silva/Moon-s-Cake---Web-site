@@ -1,0 +1,119 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Macondo", "Poppins", sans-serif;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: url('Images/BG_Main.png') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+/* Header Navigation */
+header {
+  background-color: #333;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+/* Message Section */
+.message {
+  text-align: center;
+  font-size: 42px;
+  padding: 120px 20px 40px;
+  font-weight: bold;
+  color: #5c2e00;
+  font-family: "Macondo", cursive;
+}
+
+/* About Content Section */
+#contacts {
+  padding: 40px 20px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.contacts-wrapper {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.details-container {
+    background-color: #fff7f1;
+  /* background: rgba(255, 255, 255, 0.9); */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.details-container h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #b87333;
+  text-align: center;
+  font-family: "Macondo", "Poiret One", sans-serif;
+}
+
+.details-container p,
+.details-container li {
+  margin-bottom: 14px;
+}
+
+.details-container ul {
+  list-style: disc;
+  margin-left: 25px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  position: relative;
+  width: 100%;
+}
+
+footer p {
+  color: #ccc;
+}

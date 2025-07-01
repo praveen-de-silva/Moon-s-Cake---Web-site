@@ -106,26 +106,26 @@ h2 {
 
 .service-box img {
     width: 300px;
-    height: 200px;
+    height: 230px;
     padding-bottom: 20px;
-    height: auto;
+    /* height: auto; */
     border-radius: 10px;
 }
 
 #service-box1 {
-  background: linear-gradient(to right, rgba(255,255,255,0.8), rgb(255, 233, 233)),
+  background: linear-gradient(to right, rgba(255,255,255,0.8), #fff7f1),
               url("imgs/Cake_home_1.jpg") no-repeat center center;
   background-size: cover;
 }
 
 #service-box2 {
-  background: linear-gradient(to right, rgba(255,255,255,0.8), rgb(255, 233, 233)),
+  background: linear-gradient(to right, rgba(255,255,255,0.8), #fff7f1),
               url("imgs/Cake_home_2_weddingCake.jpg") no-repeat center center;
   background-size: cover;
 }
 
 #service-box3 {
-  background: linear-gradient(to right, rgba(255,255,255,0.8), rgb(255, 233, 233)),
+  background: linear-gradient(to right, rgba(255,255,255,0.8), #fff7f1),
               url("imgs/sweets_home_1.jpeg") no-repeat center center;
   background-size: cover;
 }
